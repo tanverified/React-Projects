@@ -134,7 +134,7 @@ p {
 }
 
 main {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,7 +179,7 @@ main {
   display: block;
   width: 100%;
   border-color: transparent;
-  background: var(--clr-pink);
+  background: var(--clr-grey-9);
   margin: 2rem auto 0 auto;
   text-transform: capitalize;
   font-size: 1.2rem;
