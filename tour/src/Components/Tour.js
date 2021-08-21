@@ -1,18 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 
-function Tour(props) {
+function Tour({ id, name, info, image, price, removeTourHandle }) {
+  const [showInfo, setShowInfo] = useState(false);
+
+  const infoHandle = () => {
+    setShowInfo(!showInfo);
+  };
+
   return (
-    <article className="single-tour">
-      <img src={props.image} alt={props.name} />
+    <div className="single-tour">
+      <img src={image} alt={name} />
       <footer>
         <div className="tour-info">
-          <h4>{props.name}</h4>
-          <h4 className="tour-price">{props.price}</h4>
+          <h4>{name}</h4>
+          <h4 className="tour-price">${price}</h4>
         </div>
-        <p>{props.info}</p>
-        <button className="delete-btn">Not Interested</button>
+        <p>
+          {showInfo ? info : `${info.substring(0, 200)} ...`}
+          <button onClick={infoHandle}>{showInfo ? "read less" : "read more"}</button>
+        </p>
+        <button className="delete-btn" onClick={() => removeTourHandle(id)}>
+          Not interested
+        </button>
       </footer>
-    </article>
+    </div>
   );
 }
 
