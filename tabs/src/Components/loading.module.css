@@ -1,0 +1,33 @@
+.loading_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  color: hsl(209, 61%, 16%);
+  font-family: Consolas, Menlo, Monaco, monospace;
+  font-weight: bold;
+  font-size: 50px;
+  opacity: 0.8;
+  width: 100px;
+  height: 100px;
+  margin-top: 150px;
+}
+
+.loader span {
+  display: inline-block;
+  animation: pulse 0.4s alternate infinite ease-in-out;
+  
+}
+
+.loader span:nth-child(odd) {
+  animation-delay: 0.4s;
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
