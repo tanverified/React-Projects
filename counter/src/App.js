@@ -3,7 +3,7 @@ import CounterRedux from "./CounterRedux";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { composeWithDevTools } from 'redux-devtools-extension';
-import countReducer from "./count_reducer";
+import reducer from "./reducer";
 
 
 const defaultState = {
@@ -11,7 +11,7 @@ const defaultState = {
   name: "John",
 };
 
-const store = createStore(countReducer, defaultState,composeWithDevTools());
+const store = createStore(reducer, defaultState,composeWithDevTools());
 
 function App() {
   return (

@@ -24,7 +24,7 @@ function CounterRedux(props) {
 }
 
 function mapStateToProps(state) {
-  return { count: state.count, othername: "john" };
+  return { count: state.count };
 }
 function mapDispatchToProps(dispatch) {
   return {
