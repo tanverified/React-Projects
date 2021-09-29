@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app {
+  @apply grid grid-cols-2 gap-4 justify-center m-5;
+}
+.main {
+  @apply border-2 p-7 rounded-xl bg-gray-300 text-center;
+}
+
+.heading {
+  @apply text-3xl text-gray-700 mt-0;
+}
+
+.section {
+  @apply mt-4 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4 text-center text-xl;
+}
+
+.count {
+  @apply p-2 text-4xl my-0 mx-auto;
+}
+
+.btn {
+  @apply py-2 px-4 font-semibold rounded-lg shadow-md;
+}
+
+.btn-green {
+  @apply text-white bg-green-400 hover:bg-green-600 ml-1;
+}
+
+.btn-red {
+  @apply text-white bg-red-400 hover:bg-red-600 mr-1;
+}
+
+.btn-blue {
+  @apply text-white bg-blue-500 hover:bg-blue-700 ml-1 mr-1;
+}
